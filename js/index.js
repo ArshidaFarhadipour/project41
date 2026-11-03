@@ -359,7 +359,7 @@ async function getAgents() {
 
                 <button
                     class="agency-retry"
-                    onclick="getAgents()"
+                    onclick="location.reload()"
                 >
                     تلاش دوباره
                 </button>
@@ -371,6 +371,56 @@ async function getAgents() {
 
 
 getAgents();
+
+
+// Auto fit FLM items on mobile
+
+function fitFLMItems() {
+
+    if (window.innerWidth > 768) return;
+
+    const items = document.querySelectorAll(
+        '#product-slider .product-slide[data-slide="2"] .items > div'
+    );
+
+    items.forEach(item => {
+
+        const text = item.querySelector('span');
+
+        if (!text) return;
+
+        let fontSize = 18;
+
+        text.style.fontSize = fontSize + 'px';
+
+        while (
+            text.scrollWidth > text.clientWidth &&
+            fontSize > 10
+        ) {
+            fontSize -= 0.25;
+            text.style.fontSize = fontSize + 'px';
+        }
+
+    });
+}
+
+const flmItems = document.querySelector(
+    '#product-slider .product-slide[data-slide="2"] .items'
+);
+
+if (flmItems) {
+
+    const observer = new ResizeObserver(() => {
+        fitFLMItems();
+    });
+
+    observer.observe(flmItems);
+
+}
+
+window.addEventListener('resize', fitFLMItems);
+
+fitFLMItems();
 
 
 

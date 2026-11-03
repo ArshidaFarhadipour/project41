@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Yekan";
-   src: url("../fonts/YekanBakh-Regular.ttf") format("truetype");
+   src:url("../fonts/YekanBakh-Regular.ttf") format("truetype");
 }
 
 @font-face {
@@ -89,7 +89,7 @@
 }
 #home{
     min-height: 100vh;
-    background-image: url("../images/photos/Hero Image.png");
+    background-image: url("../images/photos/Hero\ Image.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -813,6 +813,7 @@ z-index: 10003;
     display: block;
     width: 100%;
     height: 100%;
+
     object-fit: contain;
     object-position: center;
     max-width:300px;
@@ -855,12 +856,12 @@ line-height:45px;
     font-size: 30px;
     font-weight: 700;
     letter-spacing: 0%;
-    margin-bottom: 24px;
+    margin-bottom: 50px;
     margin-top: 19px;
 
 }
 .paragraph1{
-    margin-bottom: 24px;
+    margin-bottom: 60px;
     padding-left: 50px;
     font-size: 18px;
 
@@ -872,6 +873,12 @@ line-height:45px;
     font-size: 18px;
 }
 .items{
+    font-size: 18px;
+    direction: ltr;
+    line-height: 2;
+}
+
+.items2{
     font-size: 18px;
     direction: ltr;
     line-height: 2;
@@ -902,6 +909,16 @@ line-height:45px;
     flex-wrap: wrap;
 }
 
+.mis-features2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    line-height: 2;
+    font-size: 18px;
+}
+
 .mis-col {
     display: flex;
     flex-direction: column;
@@ -919,12 +936,6 @@ line-height:45px;
 }
 
 
-.mis-col2 div {
-    font-size:18px;
-    line-height: 2;
-}
-
-
 /* ================= responsive products ================= */
 @media(max-width:1105px){
     #products {
@@ -938,9 +949,10 @@ line-height:45px;
 .colorblack {
     flex-direction: column;
     align-items: center;
-    padding: 28px 20px;
+    padding: 28px 20px 60px;
     border-radius: 16px;
     gap: 0;
+    min-height: 750px;
     
 
 }
@@ -1014,16 +1026,11 @@ h4 {
     justify-content: space-between;
     gap: 14px;
     margin-top: 22px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px 16px;
-    margin-top: 22px;
 
 }
 
 .mis-col {
     display: flex;
-    display: contents;  
     flex-direction: column;
     gap:14px;
     min-width: 200px;
@@ -1034,32 +1041,342 @@ h4 {
     color: white;
     display: flex;
     align-items: flex-start;
-    gap: 8px;
+    gap: 10px;
     text-align: right;
     white-space: normal;
 }
 
-.mis-features2 {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 22px;
+/* ===== فقط اسلاید FLM (data-slide="2") – موبایل ===== */
+
+
+    #product-slider .product-slide[data-slide="0"].active {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        width: 100%;
+    }
+
+    /* تصویر و نقاط اسلایدر */
+    #product-slider .product-slide[data-slide="0"] .pictureright {
+        order: 1;
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding-top: 25px;
+    }
+
+    #product-slider .product-slide[data-slide="0"] .slider-dots {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: flex-start;
+        gap: 6px;
+        padding: 0;
+        margin: 0;
+    }
+
+    #product-slider .product-slide[data-slide="0"] .picture-frame {
+        width: 100%;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #product-slider .product-slide[data-slide="0"] .picture-frame img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+    }
+
+    /* متن اسلاید */
+    #product-slider .product-slide[data-slide="0"] .leftwrite {
+        order: 2;
+        width: 100%;
+        text-align: right;
+        direction: rtl;
+    }
+
+    #product-slider .product-slide[data-slide="0"] h4 {
+        font-size: clamp(18px, 4vw, 22px);
+        line-height: 1.7;
+        text-align: center;
+        margin: 0 0 16px;
+    }
+
+    #product-slider .product-slide[data-slide="0"] .paragraph1 {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 22px;
+        font-size: 15px;
+        line-height: 2;
+        text-align: justify;
+        direction: rtl;
+    }
+
+    #product-slider .product-slide[data-slide="0"] .paragraph2 {
+        text-align: right;
+        font-size: 16px;
+        margin: 10px 0 15px;
+    }
+
+    /* امکانات اصلی */
+    #product-slider .product-slide[data-slide="0"] .items2 {
+        display: flex;
+        flex-direction: column;
+        direction: rtl;
+        width: 100%;
+        gap: 12px;
+        font-size: 15px;
+        line-height: 2;
+    }
+
+    #product-slider .product-slide[data-slide="0"] .items2 > div {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 8px;
+        width: 100%;
+        text-align: right;
+        white-space: normal;
+        direction: rtl; 
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    #product-slider .product-slide[data-slide="0"] .check {
+        width: 18px;
+        height: 14px;
+        flex-shrink: 0;
+        margin-top: 6px;
+        order: -1;
+        flex-shrink: 0;
+        
+    }
+
+
+/* ===== فقط اسلاید دوم (MIS) – دو ستون در موبایل ===== */
+#product-slider .product-slide[data-slide="1"] .mis-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 11px;
+    margin-top: 18px;
+    width: 100%;
 }
 
-.mis-col2 {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+#product-slider .product-slide[data-slide="1"] .mis-col {
+    display: contents;
 }
 
-.mis-col2 div {
-    font-size: 15px;
+#product-slider .product-slide[data-slide="1"] .mis-col div {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 12px;
+    line-height: 1.2;
     color: white;
+    text-align: right;
+    white-space: normal;
+    direction: rtl;
+}
+
+
+
+
+/* ===== فقط اسلاید FLM (data-slide="2") – موبایل ===== */
+#product-slider .product-slide[data-slide="2"] .items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    direction: rtl !important;
+    font-size: 13.5px;
+    line-height: 1.55;
+}
+
+#product-slider .product-slide[data-slide="2"] .items > div {
+    display: flex !important;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+    direction: rtl !important;
+}
+
+#product-slider .product-slide[data-slide="2"] .items > div .check {
+    order: -1 !important;          /* تیک حتماً اول (سمت راست) */
+    width: 16px !important;
+    height: 13px !important;
+    flex-shrink: 0 !important;
+    margin-top: 3px;
+}
+
+#product-slider .product-slide[data-slide="2"] .items > div span {
+    order: 1 !important;
+    flex: 1 1 auto;
+    text-align: right;
+    min-width: 0;                  /* اجازه می‌دهد متن درست بشکند */
+}
+/* ===== Responsive Product Slide 4 ONLY ===== */
+
+
+    #product-slider .product-slide[data-slide="3"].active {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        width: 100%;
+    }
+
+    /* Image */
+    #product-slider .product-slide[data-slide="3"] .pictureright {
+        order: 1;
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding-top: 25px;
+    }
+
+    #product-slider .product-slide[data-slide="3"] .slider-dots {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        gap: 6px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #product-slider .product-slide[data-slide="3"] .picture-frame {
+        width: 100%;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #product-slider .product-slide[data-slide="3"] .picture-frame img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+    }
+
+    /* Text */
+    #product-slider .product-slide[data-slide="3"] .leftwrite {
+        order: 2;
+        width: 100%;
+        text-align: right;
+        direction: rtl;
+    }
+
+    #product-slider .product-slide[data-slide="3"] h4 {
+        font-size: clamp(18px, 4vw, 22px);
+        line-height: 1.7;
+        text-align: center;
+        margin: 0 0 16px;
+    }
+
+    #product-slider .product-slide[data-slide="3"] .paragraph1 {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 22px;
+        font-size: 15px;
+        line-height: 2;
+        text-align: justify;
+        direction: rtl;
+    }
+
+    #product-slider .product-slide[data-slide="3"] .paragraph2 {
+        text-align: right;
+        font-size: 16px;
+        margin: 10px 0 15px;
+    }
+
+    /* Lists */
+    #product-slider .product-slide[data-slide="3"] .items,
+    #product-slider .product-slide[data-slide="3"] .items2 {
+        width: 100%;
+        font-size: 15px;
+        line-height: 2;
+        direction: rtl;
+        text-align: right;
+    }
+
+    #product-slider .product-slide[data-slide="3"] .check {
+        width: 18px;
+        height: 14px;
+        flex-shrink: 0;
+        margin-top: 6px;
+    }
+
+    #product-slider .product-slide[data-slide="3"] .mis-features,
+    #product-slider .product-slide[data-slide="3"] .mis-features2 {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 22px;
+        width: 100%;
+    }
+
+    #product-slider .product-slide[data-slide="3"] .mis-col {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        min-width: 0;
+        width: 100%;
+    }
+
+    #product-slider .product-slide[data-slide="3"] .mis-col div {
+        font-size: 14px;
+        white-space: normal;
+        text-align: right;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    #product-slider .product-slide[data-slide="3"] .mis-features2 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#product-slider .product-slide[data-slide="3"] .mis-col2 {
+    display: contents; /* آیتم‌ها مستقیم زیر هم قرار می‌گیرند و عرض کامل می‌گیرند */
+}
+
+#product-slider .product-slide[data-slide="3"] .mis-col2 > div {
     display: flex;
     align-items: flex-start;
     gap: 8px;
+    width: 100%;
+    direction: rtl;
+    font-size: 12px;          /* کوچک‌تر تا کمتر بره خط بعد */
+    line-height: 1.55;
+    color: white;
     text-align: right;
     white-space: normal;
+}
+
+#product-slider .product-slide[data-slide="3"] .mis-col2 > div .check {
+    width: 16px !important;
+    height: 13px !important;
+    flex-shrink: 0;
+    margin-top: 3px;
 }
 }
 
@@ -1616,6 +1933,9 @@ footer img{
     border-radius: 50%;
     transition: 0.2s;
 }
+
+
+
 
 
 
